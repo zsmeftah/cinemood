@@ -118,10 +118,10 @@ class LLMService:
             raise ValueError("GEMINI_API_KEY not configured")
 
         genai.configure(api_key=settings.gemini_api_key)
-        # Use gemini-2.0-flash which is the current available model
-        self.model = genai.GenerativeModel('gemini-2.0-flash')
+        # Use gemini-2.5-flash which is the latest available model
+        self.model = genai.GenerativeModel('gemini-2.5-flash')
         self._initialized = True
-        print("Gemini LLM initialized with gemini-2.0-flash")
+        print("Gemini LLM initialized with gemini-2.5-flash")
 
     def _build_prompt(
         self,
